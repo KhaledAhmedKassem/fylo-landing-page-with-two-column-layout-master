@@ -1,0 +1,528 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  /* ### Primary */
+
+  --Very-Dark: hsl(243, 87%, 12%);
+  --Desaturated-Blue: hsl(238, 22%, 44%);
+
+  /* ### Accent */
+
+  --Bright-Blue: hsl(224, 93%, 58%);
+  --Moderate-Cyan: hsl(170, 45%, 43%);
+
+  /* ### Neutral */
+
+  --Light-Grayish: hsl(240, 75%, 98%);
+  --Light-Gray: hsl(0, 0%, 75%);
+}
+body {
+  font-family: "Raleway", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* start general */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+h1 {
+  font-weight: 700;
+}
+h2,
+a {
+  font-weight: 700;
+}
+::placeholder {
+  color: #d7d7d7;
+}
+P {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-left: 15px;
+}
+/* smell */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end general */
+/* start header */
+header {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 60px;
+}
+header .container ul {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+header .container ul li {
+  margin-left: 20px;
+}
+header .container ul li a {
+  color: black;
+  font-size: 1.25rem;
+}
+/* end header */
+/* start sec-one */
+.sec-one {
+  padding-top: 4rem;
+  padding-bottom: 9rem;
+}
+.sec-one .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sec-one .container .text {
+  flex: 1;
+}
+.sec-one .container .text h1 {
+  font-size: clamp(1.56rem, 7vw, 2.43rem);
+  margin-bottom: 1rem;
+}
+.sec-one .container .text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.8rem;
+}
+.sec-one .container .text form {
+  display: flex;
+  height: 50px;
+}
+.sec-one .container .text input[type="email"] {
+  flex-basis: 55%;
+  padding-left: 20px;
+  font-size: 1.24rem;
+  border: 1px solid #080226;
+}
+.sec-one .container .text input[type="email"]:focus {
+  outline: none;
+}
+.sec-one .container .text input[type="submit"] {
+  flex-basis: 30%;
+  margin-left: 1rem;
+  color: white;
+  background-color: var(--Bright-Blue);
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+.sec-one .container .img {
+  flex: 1;
+}
+/* end sec-one */
+/* start sec-two */
+.sec-two {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  background-image: url(../images/bg-curve-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.sec-two .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sec-two .container .text {
+  flex: 45%;
+}
+.sec-two .container .img {
+  flex: 30%;
+}
+.sec-two .container .text h1 {
+  font-size: 2.43rem;
+  margin-bottom: 2rem;
+}
+.sec-two .container .text p {
+  font-size: clamp(1rem, 7vw, 1.25rem);
+  margin-bottom: 1rem;
+}
+
+.sec-two .container .text .link {
+  position: relative;
+  margin-top: 1.5rem;
+}
+.sec-two .container .text .link a {
+  color: var(--Moderate-Cyan);
+}
+.sec-two .container .text .link::before {
+  position: absolute;
+  content: "";
+  bottom: -7px;
+  left: 0;
+  height: 2px;
+  width: 170px;
+  background-color: var(--Moderate-Cyan);
+}
+.sec-two .container .text .link::after {
+  position: absolute;
+  top: 2px;
+  left: 155px;
+  font-family: "Font Awesome 5 Free";
+  content: "\f35a";
+  color: var(--Moderate-Cyan);
+}
+.sec-two .container .text .quote {
+  max-width: 520px;
+  padding: 40px 50px 30px 40px;
+  background-color: white;
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 17px #f5f4fa;
+}
+.sec-two .container .text .quote p {
+  margin-top: 1rem;
+}
+
+.sec-two .container .text .quote .box {
+  display: flex;
+  align-items: center;
+}
+.sec-two .container .text .quote .box img {
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.sec-two .container .text .quote .box .info h2 {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 0.6rem;
+}
+.sec-two .container .text .quote .box .info p {
+  font-size: 14px;
+  margin: 0;
+}
+/* end sec-one */
+/* start subscribe */
+.subscribe {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: var(--Desaturated-Blue);
+  color: white;
+}
+.subscribe .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subscribe .container .text {
+  flex-basis: 40%;
+}
+.subscribe .container .text H1 {
+  margin-bottom: 2rem;
+}
+.subscribe .container form {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  justify-content: space-between;
+  flex-basis: 40%;
+}
+.subscribe .container form input[type="email"] {
+  flex-basis: 50%;
+  padding-left: 20px;
+  font-size: 1.24rem;
+}
+.subscribe .container form input[type="email"]:focus {
+  outline: none;
+}
+.subscribe .container form input[type="submit"] {
+  flex-basis: 40%;
+  color: white;
+  background-color: var(--Bright-Blue);
+  font-size: 1rem;
+  border: none;
+  width: 50%;
+  border-radius: 5px;
+}
+/* end subscribe */
+/* start footer */
+footer {
+  padding-top: 6rem;
+  padding-bottom: 1rem;
+  background-color: var(--Very-Dark);
+  color: #ffff;
+}
+footer .container .link ul li a {
+  color: #ffff;
+  font-size: 0.8rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+footer .container .content {
+  flex-basis: 20%;
+}
+footer .content .info .phone {
+  margin-bottom: 1em;
+  position: relative;
+  margin-left: 30px;
+}
+footer .content .info .phone::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f2a0";
+  font-weight: 900;
+  position: absolute;
+  left: -30px;
+  top: 3px;
+}
+footer .content .info .email {
+  margin-bottom: 1em;
+  position: relative;
+  margin-left: 30px;
+}
+footer .content .info .email::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0e0";
+  font-weight: 900;
+  position: absolute;
+  left: -30px;
+  top: 3px;
+}
+footer .container .content p {
+  margin-bottom: 1rem;
+}
+footer .container .content img {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+  margin-bottom: 2rem;
+}
+
+footer .container .link {
+  display: flex;
+  flex-basis: 40%;
+  margin-top: 2rem;
+}
+footer .container .link ul {
+  display: flex;
+  flex: 45%;
+  flex-direction: column;
+}
+footer .container .link ul li {
+  margin-top: 1rem;
+}
+footer .container .link ul li a {
+  color: #ffff;
+  font-size: 0.8rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+footer .container .social {
+  flex-basis: 20%;
+  margin-top: 2rem;
+}
+footer .container .social ul {
+  display: flex;
+}
+footer .container .social ul li {
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+footer .container .social a {
+  color: #ffff;
+  font-size: 0.9rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+/* end footer */
+/* start media */
+@media (max-width: 800px) {
+  .container {
+    max-width: 600px;
+  }
+  header .container img {
+    width: 7rem;
+  }
+  header .container ul li a {
+    font-size: 1rem;
+  }
+  .sec-one .container {
+    flex-direction: column-reverse;
+  }
+  .sec-one .container .text {
+    text-align: center;
+    padding: 3rem 1rem 1rem;
+  }
+  .sec-one .container .text p {
+    margin-top: 3rem;
+  }
+  .sec-one .container .text form {
+    height: 120px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .sec-one .container .text input[type="email"] {
+    flex-basis: 45%;
+  }
+  .sec-one .container .text input[type="submit"] {
+    flex-basis: 45%;
+    margin-left: 0;
+    color: white;
+    background-color: var(--Bright-Blue);
+    font-size: 1rem;
+    border: none;
+  }
+  .sec-two .container {
+    flex-direction: column-reverse;
+  }
+  .sec-two .container .text {
+    margin-top: 3rem;
+  }
+  .sec-two .container .text h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .sec-two .container .text .link {
+    margin: 3rem auto;
+    width: 170px;
+  }
+  .sec-two .container .text .quote {
+    max-width: 520px;
+    margin: 4rem auto;
+    padding: 20px 40px;
+  }
+  .subscribe .container {
+    text-align: center;
+    flex-direction: column;
+    height: 250px;
+  }
+  .subscribe .container .text p {
+    margin-bottom: 1.5rem;
+  }
+  .subscribe .container form {
+    width: 75%;
+  }
+  .subscribe .container form input[type="submit"] {
+    width: initial;
+  }
+  footer .container {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  footer .container .link {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .container .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .two {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    max-width: 350px;
+  }
+
+  header .container img {
+    width: 7rem;
+  }
+  header .container ul li a {
+    font-size: 0.8rem;
+  }
+  .sec-one .container .text h1 {
+    font-size: 1.56rem;
+  }
+  .sec-one .container .text p {
+    font-size: 0.93rem;
+  }
+  .sec-one {
+    padding-bottom: 4rem;
+  }
+  .sec-two {
+    padding-top: 4rem;
+  }
+  .sec-two .container .text h1 {
+    font-size: 1.25rem;
+  }
+  .sec-two .container .text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .sec-two .container .text .quote {
+    max-width: 300px;
+    padding: 10px 15px;
+  }
+  .sec-two .container .text .quote p {
+    font-size: 12px;
+  }
+  .sec-two .container .text .quote .box img {
+    width: 40px;
+  }
+  .sec-two .container .text .quote .box .info h2 {
+    font-size: 13px;
+  }
+  .sec-two .container .text .quote .box .info p {
+    font-size: 10px;
+  }
+  .subscribe .container .text H1 {
+    font-size: 1.25rem;
+  }
+  .subscribe .container .text p {
+    font-size: 17px;
+  }
+  .subscribe .container form input[type="submit"] {
+    font-size: 0.9rem;
+  }
+
+  .sec-two .container .text {
+    margin-top: 3rem;
+    padding: 0 20px;
+  }
+}
